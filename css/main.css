@@ -299,7 +299,7 @@ header {
 }
 
 header .logo {
-  padding: 1.5rem 2.3rem;
+  padding: 1.5rem 0;
 }
 
 .banner {
@@ -307,7 +307,7 @@ header .logo {
 }
 
 .banner .content-left {
-  padding: 0 2.3rem;
+  padding-left: 2.3rem;
 }
 
 .banner .content-left h1 {
@@ -315,6 +315,7 @@ header .logo {
   color: #1A2C3A;
   text-shadow: 2px 2px 0 #df8080, 3px 5px 0 #FFF;
   position: relative;
+  max-width: 800px;
 }
 
 .banner .content-left h1:before {
@@ -331,6 +332,9 @@ header .logo {
 .banner .content-left p {
   font-size: 1.4rem;
   margin: 2rem 0;
+  font-weight: 600;
+  max-width: 450px;
+  line-height: 28px;
 }
 
 .feature-game {
@@ -388,15 +392,7 @@ header .logo {
   margin-bottom: -4px;
 }
 
-.feature-game .feature-game-content .bg-cookie-jam-blast {
-  border-radius: 1.5rem;
-}
-
-.feature-game .feature-game-content .bg-panda-pop {
-  border-radius: 1.5rem;
-}
-
-.feature-game .feature-game-content .bg-cooke-jam {
+.feature-game .feature-game-content .bg-cookie-jam-blast, .feature-game .feature-game-content .bg-panda-pop, .feature-game .feature-game-content .bg-cooke-jam {
   border-radius: 1.5rem;
 }
 
@@ -579,6 +575,19 @@ footer .footer-left .copyright p {
   .container {
     width: 100%;
   }
+  .banner .content-left {
+    position: relative;
+    padding: 5rem 0 18rem 5rem;
+    background: url(../images/bg-banner.png) no-repeat;
+    background-size: cover;
+  }
+  .banner .content-left .bg-content-left {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    background: url(../images/bg-img.png) no-repeat;
+  }
   .dream-team .team > img {
     width: 70%;
     top: 18rem;
@@ -634,6 +643,7 @@ footer .footer-left .copyright p {
   html .banner .content-left h1 {
     font-size: 6.5rem;
     line-height: 90px;
+    text-shadow: 4px 3px 0 #df8080, 7px 8px 0 #fff;
   }
   html h2 {
     font-size: 4.5rem;
@@ -671,4 +681,44 @@ a.btn-learn-more {
   padding: 15px 10px;
   border-radius: 10px 10px 20px 20px;
 }
+
+/* menu desktop */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1a2c3a;
+  padding: 0 15px;
+}
+
+/* menu desktop */
 /*# sourceMappingURL=main.css.map */

@@ -190,20 +190,21 @@ header {
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 
     .logo {
-        padding:  1.5rem 2.3rem ;
+        padding:  1.5rem 0;
     }
 }
 
 .banner {
     margin-bottom: 1.5rem;
     .content-left {
-        padding: 0 2.3rem;
+        padding-left: 2.3rem;
 
         h1 {
             line-height: 36px;
             color: $blue-dark-color;
             text-shadow: 2px 2px 0 $pink-light-color, 3px 5px 0 $white-color;
             position: relative;
+            max-width: 800px;
 
             &:before {
                 position: absolute;
@@ -220,6 +221,9 @@ header {
         p {
             font-size: 1.4rem;
             margin: 2rem 0;
+            font-weight: 600;
+            max-width: 450px;
+            line-height: 28px;
         }
 
     }
@@ -273,19 +277,8 @@ header {
             margin-bottom: -4px;
         }
 
-        .bg-cookie-jam-blast {
+        .bg-cookie-jam-blast, .bg-panda-pop, .bg-cooke-jam {
             border-radius: 1.5rem;
-            // background: url('../images/cookie-jam-blast-bg.webp') no-repeat right bottom;
-        }
-
-        .bg-panda-pop {
-            border-radius: 1.5rem;
-            // background: url('../images/panda-pop-bg.webp') no-repeat right bottom;
-        }
-
-        .bg-cooke-jam {
-            border-radius: 1.5rem;
-            // background: url('../images/cooke-jam-bg.webp') no-repeat right bottom;
         }
         
         .absolute {
@@ -461,6 +454,23 @@ footer {
     .container {
         width: 100%;
     }
+
+    .banner {
+        .content-left {
+            position: relative;
+            padding: 5rem 0 18rem 5rem;
+            background: url(../images/bg-banner.png) no-repeat;
+            background-size: cover;
+
+            .bg-content-left{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 60%;
+                background: url(../images/bg-img.png) no-repeat;
+            }
+        }
+    }
     .dream-team {
         .team {
             > img {
@@ -480,6 +490,7 @@ footer {
         }
 
     }
+
 }
 
 @media (min-width: 1024px) {
@@ -518,7 +529,6 @@ footer {
         }
       
     }
-    
 
     .dream-team {
         .team {
@@ -529,9 +539,10 @@ footer {
     }
 
     html {
-        .banner .content-left h1{
+        .banner .content-left h1 {
             font-size: 6.5rem;
             line-height: 90px;
+            text-shadow: 4px 3px 0 #df8080, 7px 8px 0 #fff;
         }
         h2 {
             font-size: 4.5rem;
@@ -582,3 +593,34 @@ a.btn-learn-more {
     padding: 15px 10px;
     border-radius: 10px 10px 20px 20px;
 }
+
+
+/* menu desktop */
+header {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+
+            a {
+                text-decoration: none;
+                font-size: 2rem;
+                font-weight: 900;
+                color: #1a2c3a;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+/* menu desktop */
