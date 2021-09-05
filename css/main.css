@@ -237,7 +237,7 @@ html a.btn-more-games {
   padding: 12px;
 }
 
-html .social {
+.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,15 +253,16 @@ html .social {
   padding: 30px;
 }
 
-html .social.white i {
+.social.white i {
   border: solid 2px #FFF;
 }
 
-html .social.dark i {
+.social.dark i {
   border: solid 2px #1A2C3A;
+  margin: 0 5px;
 }
 
-html .social i {
+.social i {
   padding: 0.2rem;
   border-radius: 100%;
   font-size: 1.5rem;
@@ -572,12 +573,52 @@ footer .footer-left .copyright p {
 }
 
 @media (min-width: 768px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+  header nav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav ul a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1a2c3a;
+    padding: 0 0.3rem;
+  }
+  header .social {
+    padding: 0;
+  }
+  header .social i {
+    font-size: 1rem;
+  }
   .container {
     width: 100%;
   }
   .banner .content-left {
     position: relative;
-    padding: 5rem 0 18rem 5rem;
+    padding: 13rem 0 18rem 5rem;
     background: url(../images/bg-banner.png) no-repeat;
     background-size: cover;
   }
@@ -604,6 +645,18 @@ footer .footer-left .copyright p {
 }
 
 @media (min-width: 1024px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header .social {
+    padding: 10px !important;
+  }
   footer {
     display: -ms-grid;
     display: grid;
@@ -640,6 +693,9 @@ footer .footer-left .copyright p {
   .dream-team .team > img {
     width: 650px;
   }
+  html .banner .content-left {
+    padding-top: 5rem;
+  }
   html .banner .content-left h1 {
     font-size: 6.5rem;
     line-height: 90px;
@@ -651,6 +707,16 @@ footer .footer-left .copyright p {
 }
 
 @media (min-width: 1450px) {
+  header nav ul a {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  header .social {
+    padding: 10px !important;
+  }
+  header .social i {
+    font-size: 1.5rem;
+  }
   .dream-team .team > img {
     width: 850px;
     top: 5rem;
@@ -683,42 +749,56 @@ a.btn-learn-more {
 }
 
 /* menu desktop */
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9;
-}
-
-header nav ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header nav ul a {
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 900;
-  color: #1a2c3a;
-  padding: 0 15px;
-}
-
 /* menu desktop */
+/* menu mobile */
+@media (max-width: 767px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0 0 110px 0;
+  }
+  header .mobile {
+    background: #1A2C3A;
+    top: 9px;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    z-index: 9;
+    position: fixed;
+  }
+  header .mobile a {
+    text-decoration: none;
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-weight: 900;
+    color: #fff;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header .social {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    color: #fff;
+    max-width: 70%;
+  }
+  header .social i {
+    border: solid 2px #fff !important;
+  }
+}
+
+/* menu mobile */
 /*# sourceMappingURL=main.css.map */
