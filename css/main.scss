@@ -162,6 +162,11 @@ html {
         margin: 0 5px;
     }
 
+    a {
+        text-decoration: none;
+        color: $blue-dark-color;
+    }
+
     i {
         padding: 0.2rem;
         border-radius: 100%;
@@ -298,8 +303,8 @@ header {
     }
 }
 
-
 .dream-team{
+    margin-top: 10rem;
     margin-bottom: 150px;
     background:  $white-two-color;
 
@@ -552,6 +557,12 @@ footer {
             z-index: 9;
             color: $white-color;
             max-width: 70%;
+            padding: 2rem 0;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
 
             i {
                 border: solid 2px $white-color!important;

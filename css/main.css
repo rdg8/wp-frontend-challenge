@@ -262,6 +262,11 @@ html a.btn-more-games {
   margin: 0 5px;
 }
 
+.social a {
+  text-decoration: none;
+  color: #1A2C3A;
+}
+
 .social i {
   padding: 0.2rem;
   border-radius: 100%;
@@ -413,6 +418,7 @@ header .logo {
 }
 
 .dream-team {
+  margin-top: 10rem;
   margin-bottom: 150px;
   background: #F2F2F2;
 }
@@ -671,6 +677,11 @@ footer .footer-left .copyright p {
     z-index: 9;
     color: #FFF;
     max-width: 70%;
+    padding: 2rem 0;
+  }
+  header .social a {
+    text-decoration: none;
+    color: #fff;
   }
   header .social i {
     border: solid 2px #FFF !important;
