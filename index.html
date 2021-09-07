@@ -14,6 +14,10 @@
 <body>
     <header>
         <img src="./images/logo.svg" alt="logo" title="logo" class="responsive-img logo">
+
+        <div id="hamburger-wrapper" class="">
+            <p class="burger"></p>
+        </div>
         <nav id="menu" class="mobile desktop">
             <ul>
                 <li><a href="">Who We Are</a></li>
@@ -24,15 +28,16 @@
                 <li><a href="">Support</a></li>
                 <li><a href="">FAQs</a></li>
             </ul>
-
-            
         </nav>
-        <div class="social dark">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-linkedin-in"></i>
+
+        <div id="social-menu">
+            <div class="social dark">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
         </div>
     </header>
 
@@ -155,5 +160,15 @@
 
     </footer>
 
+    <script>
+        const wrapper = document.getElementById('hamburger-wrapper')
+        const social = document.getElementById('social-menu')
+        const menu = document.getElementById('menu')
+        wrapper.addEventListener("click", () => {
+            wrapper.classList.toggle("open")
+            menu.classList.toggle("active")
+            social.classList.toggle("active")
+        })
+    </script>
 </body>
 </html>
