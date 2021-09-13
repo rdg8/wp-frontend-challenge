@@ -23,6 +23,52 @@
 }
 
 /* icons fontawesome */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal !important;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/fontawesome/fa-brands-400.eot");
+  src: url("../fonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("../fonts/fontawesome/fa-brands-400.woff") format("woff"), url("../fonts/fontawesome/fa-brands-400.ttf") format("truetype"), url("../fonts/fontawesome/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/fontawesome/fa-regular-400.eot");
+  src: url("../fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("../fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/fontawesome/fa-solid-900.eot");
+  src: url("../fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), url("../fonts/fontawesome/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+}
+
 .fa-facebook-f:before {
   content: "\f39e";
 }
@@ -41,27 +87,6 @@
 
 .fa-linkedin-in:before {
   content: "\f0e1";
-}
-
-.fab {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
-
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("../fonts/fontawesome/fa-regular-400.eot");
-  src: url("../fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("../fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg");
 }
 
 /* icons fontawesome */
@@ -569,10 +594,11 @@ footer .footer-left .copyright p {
 @media (max-width: 767px) {
   #logo-menu-mobile {
     position: fixed;
-    bottom: 100px;
+    bottom: 80px;
     z-index: 9;
     width: 90px;
-    right: 47%;
+    right: 0;
+    left: -50px;
     text-align: center;
     margin: 0 auto;
     display: none;
@@ -666,7 +692,7 @@ footer .footer-left .copyright p {
   }
   header .mobile a {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -688,8 +714,18 @@ footer .footer-left .copyright p {
     right: 0;
     z-index: 9;
     color: #FFF;
-    max-width: 70%;
-    padding: 2rem 0;
+    max-width: 75%;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   header .social a {
     text-decoration: none;

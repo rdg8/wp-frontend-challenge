@@ -448,10 +448,11 @@ footer {
 
     #logo-menu-mobile {
         position: fixed;
-        bottom: 100px;
+        bottom: 80px;
         z-index: 9;
         width: 90px;
-        right: 47%;
+        right: 0;
+        left: -50px;
         text-align: center;
         margin: 0 auto;
         display: none;
@@ -550,7 +551,7 @@ footer {
 
         a {
             text-decoration: none;
-            font-size: 2rem;
+            font-size: 1.5rem;
             display: flex;
             flex-direction: row;
             font-weight: 900;
@@ -568,8 +569,11 @@ footer {
             right: 0;
             z-index: 9;
             color: $white-color;
-            max-width: 70%;
-            padding: 2rem 0;
+            max-width: 75%;
+            padding: 2rem 0.5rem 0.5rem 0.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
             a {
                 text-decoration: none;
