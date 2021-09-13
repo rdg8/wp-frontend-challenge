@@ -30,6 +30,10 @@
             </ul>
         </nav>
 
+        <div id="logo-menu-mobile">
+            <img src="./images/logo-white.svg" alt="logo" title="logo" class="responsive-img">
+        </div>
+
         <div id="social-menu">
             <div class="social dark">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -45,7 +49,7 @@
         <div class="content-left">
             <h1>10 years creating the best in mobile entertainment.</h1>
             <p>Jam City’s global franchise <strong>Cookie Jam</strong> has generated more than <strong>half a billion dollars</strong>, and <strong>Panda Pop</strong> has more than <strong>120 million downloads</strong> to date.</p>
-            <a href="" class="btn-learn-more">Learn More</a>
+            <a href="" class="btn-learn-more"><span class="btn-primary">Learn More</span><span class="btn-span">Let's Go</span></a>
             <img src="./images/banner-home.png" alt="" title="" class="responsive-img bg-content-left">
         </div>
                
@@ -94,9 +98,10 @@
             
         </div>
 
-        <div class="width-100">
-            <a href="" class="btn-learn-more">Browse More Games</a>
+        <div class="btn-effect">
+            <a href="" class="btn-learn-more"><span class="btn-primary">Browse More Games </span><span class="btn-span">Let's Go</span></a> 
         </div>
+
     </section>
 
     <section class="dream-team container">
@@ -112,7 +117,8 @@
             </div>
 
             <img src="./images/team.png" alt="Team" title="Team" class="responsive-img bg-team">
-            <a href="" class="btn-learn-more">Learn More</a>
+            <a href="" class="btn-learn-more"><span class="btn-primary">Learn More</span><span class="btn-span">Let's Go</span></a>
+            
         </div>
     </section>
 
@@ -162,11 +168,13 @@
 
     <script>
         const wrapper = document.getElementById('hamburger-wrapper')
+        const logo = document.getElementById('logo-menu-mobile')
         const social = document.getElementById('social-menu')
         const menu = document.getElementById('menu')
         wrapper.addEventListener("click", () => {
             wrapper.classList.toggle("open")
             menu.classList.toggle("active")
+            logo.classList.toggle("active")
             social.classList.toggle("active")
         })
     </script>

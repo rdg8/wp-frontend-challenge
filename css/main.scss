@@ -231,6 +231,9 @@ header {
             max-width: 450px;
             line-height: 28px;
         }
+        .btn-learn-more {
+            padding: 15px 50px;
+        }
 
     }
 
@@ -242,19 +245,16 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 
-    > div {
-        margin: 0 2.3rem;    
-    }
-
     h2 {
         width: 100%;
+        margin-bottom: 0;
     }
     
     p {
         font-weight: 600;
         line-height: 2rem;
         font-size: 1.4rem;
-        margin: 0.5rem auto;
+        margin: 1rem auto;
         max-width: 700px;
         text-align: center;
     }
@@ -263,8 +263,7 @@ header {
         border-radius: 1.5rem;
         box-shadow: 12px 12px 30px 5px rgba(25,25,25,0.15);
         padding-bottom: 1rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin: 1.5rem;
         position: relative;
 
         h3 {
@@ -294,7 +293,7 @@ header {
         }
 
         &:hover .absolute {
-            transform: scale(1.04);
+            transform: scale(1.04) translate(-1.5%, 0%);
             transition: 0.2s;
             top:-10px;
         }
@@ -348,6 +347,8 @@ header {
             margin: 0 auto;
             top: 10rem;
             width: 90%;
+            background: url(../images/bg-img.png) no-repeat;
+            background-size: cover;
         }
     }   
 
@@ -445,6 +446,17 @@ footer {
 /* menu mobile */
 @media (max-width: 767px) {
 
+    #logo-menu-mobile {
+        position: fixed;
+        bottom: 100px;
+        z-index: 9;
+        width: 90px;
+        right: 47%;
+        text-align: center;
+        margin: 0 auto;
+        display: none;
+    }
+
 /* menu mobile animation */
     #hamburger-wrapper {
         position: fixed;
@@ -526,28 +538,28 @@ footer {
         z-index: 10;
         margin: 0 0 110px 0;
 
-        .mobile {
-            background: $blue-dark-color;
-            top: 9px;
-            left: 0;
-            width: 80%;
-            height: 100vh;
-            z-index: 9;
-            position: fixed;
-            display: none;
+    .mobile {
+        background: $blue-dark-color;
+        top: 9px;
+        left: 0;
+        width: 80%;
+        height: 100vh;
+        z-index: 9;
+        position: fixed;
+        display: none;
 
-            a {
-                text-decoration: none;
-                font-size: 2rem;
-                display: flex;
-                flex-direction: row;
-                font-weight: 900;
-                color: $white-color;
-                padding: 0.5rem 0;
-                margin-top: 0.5rem;
-                justify-content: space-around;
-            }
+        a {
+            text-decoration: none;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: row;
+            font-weight: 900;
+            color: $white-color;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+            justify-content: space-around;
         }
+    }
 
         .social { 
             position: fixed;
@@ -573,6 +585,7 @@ footer {
     .banner {
         margin-top: 100px;
     }
+    
 }
 /* menu mobile */
 
@@ -589,7 +602,7 @@ footer {
     }
 }
 @media (min-width: 768px) {
-    .hamburger-wrapper {
+    .hamburger-wrapper, #logo-menu-mobile {
         display: none!important;
     }
     
@@ -649,7 +662,7 @@ footer {
     .banner {
         .content-left {
             position: relative;
-            padding: 13rem 0 18rem 5rem;
+            padding: 13rem 0 11rem 5rem;
             background: url(../images/bg-banner.png) no-repeat;
             background-size: cover;
 
@@ -722,10 +735,10 @@ footer {
     }
     .container-feature-game-content {
         display: flex;
+        margin-bottom: 100px;
         > div {
             margin: 0 0.5rem;
         }
-      
     }
 
     .dream-team {
@@ -739,11 +752,23 @@ footer {
     html {
         .banner {
              .content-left { 
-                 padding-top: 5rem;
+                 padding-top: 8rem;
+                 
                  h1 {
                     font-size: 6.5rem;
                     line-height: 90px;
                     text-shadow: 4px 3px 0 $pink-light-color, 7px 8px 0 $white-color;
+
+                     &:before {
+                        bottom: -50px;
+                    }
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    margin: 5rem 0;
+                    max-width: 500px;
+
                 }
             }
         }
@@ -804,12 +829,35 @@ footer {
 }
 
 a.btn-learn-more {
+    position: relative;
     font-size: 2rem;
     color: $white-color;
     text-decoration: none;
     font-weight: 600;
     background: $rosa-color;
-    width: 210px;
+    width: 250px;
     padding: 15px 10px;
     border-radius: 10px 10px 20px 20px;
+
+    &:hover {
+        background: #1a2c3a;
+        transition: .3s ease-in-out;
+        .btn-primary {
+            opacity: 0;
+        }
+        .btn-span {
+            opacity: 1;
+        }
+    }
+
+    .btn-span {
+        position: absolute;
+        opacity: 0;
+        transition: .3s ease-in-out;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
 }
