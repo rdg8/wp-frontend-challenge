@@ -22,6 +22,24 @@
 
 
 /* icons fontawesome */ 
+
+
+.fa-facebook-f:before {
+  content: "\f39e"; 
+}
+.fa-twitter:before {
+  content: "\f099"; 
+}
+.fa-instagram:before {
+  content: "\f16d"; 
+}
+.fa-youtube:before {
+  content: "\f167"; 
+}
+.fa-linkedin-in:before {
+  content: "\f0e1"; 
+}
+
 .fab {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; 
@@ -38,22 +56,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../fonts/fontawesome/fa-regular-400.woff2");
-}
-
-.fa-facebook-f:before {
-  content: "\f39e"; 
-}
-.fa-twitter:before {
-  content: "\f099"; 
-}
-.fa-instagram:before {
-  content: "\f16d"; 
-}
-.fa-youtube:before {
-  content: "\f167"; 
-}
-.fa-linkedin-in:before {
-  content: "\f0e1"; 
+  src: url("../fonts/fontawesome/fa-regular-400.eot");
+  src: url("../fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("../fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg"); 
 }
 /* icons fontawesome */ 
